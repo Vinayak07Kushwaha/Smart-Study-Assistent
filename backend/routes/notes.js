@@ -8,7 +8,7 @@ const upload = require('../middleware/upload');
 
 const router = express.Router();
 
-// Upload and process note
+
 router.post('/upload', auth, upload.single('file'), async (req, res) => {
   try {
     if (!req.file) {
